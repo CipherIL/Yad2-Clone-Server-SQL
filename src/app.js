@@ -3,7 +3,8 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
 const userRouter = require('./routers/user.router');
-// const realestateRouter = require('./routers/realestate.router');
+const realestateRouter = require('./routers/realestate.router');
+
 
 const app = express();
 
@@ -16,6 +17,6 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 app.use(userRouter);
-// app.use(realestateRouter);
+app.use(realestateRouter);
 
 module.exports = app;

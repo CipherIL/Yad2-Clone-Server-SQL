@@ -1,9 +1,9 @@
 const sql = require('mssql');
 const sqlConfig = {
-    user: 'Yad2Server',
-    password: 'Yad2Password',
-    database: 'Yad2',
-    server: 'DESKTOP-QQL7HJB',
+    user: process.env.SQL_USERNAME,
+    password: process.env.SQL_PASSWORD,
+    database: process.env.SQL_DATABASE,
+    server: process.env.SQL_SERVER,
     requestTimeout: 15000,
     options: {
         keepAlive: true,
